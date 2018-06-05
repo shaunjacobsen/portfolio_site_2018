@@ -2,3 +2,7 @@
 en:
   hello: "Hello"
   my_name_is: "I'm"
+  byline: "Full-stack developer, entrepreneur, and urbanist"
+  skills_header: "Skills"
+  projects_header: "Projects"
+  experience_header: "Experience"

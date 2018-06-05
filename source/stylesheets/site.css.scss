@@ -1,11 +1,59 @@
 $dark-grey: #333;
+$blue-grey: #f6f7fc;
+$yellow: #f9d423;
+$orange: rgb(252, 145, 58);
+$red: rgb(255, 61, 127);
+$blue: rgb(40, 215, 203);
+$green: #85e1c8;
+$purple: rgb(117, 113, 241);
 
 $light-weight: 200;
 $normal-weight: 300;
 $heavy-weight: 800;
 
+@keyframes bgcolorchange {
+  0% {
+    background: $yellow;
+  }
+  20% {
+    background: $orange;
+  }
+  40% {
+    background: $red;
+  }
+  60% {
+    background: $purple;
+  }
+  80% {
+    background: $blue;
+  }
+  100% {
+    background: $green;
+  }
+}
+@-webkit-keyframes bgcolorchange {
+  0% {
+    background: $yellow;
+  }
+  20% {
+    background: $orange;
+  }
+  40% {
+    background: $red;
+  }
+  60% {
+    background: $purple;
+  }
+  80% {
+    background: $blue;
+  }
+  100% {
+    background: $green;
+  }
+}
+
 body {
-  background-color: #f5f5f5;
+  background-color: $blue-grey;
   color: $dark-grey;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
@@ -14,23 +62,18 @@ body {
   text-align: center;
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
-}
-
 .light {
   font-weight: $light-weight;
 }
 
 .hero {
-  background: linear-gradient(135deg, #F9D423, rgb(248, 230, 109));
+  animation: bgcolorchange 60s infinite alternate;
+  -webkit-animation: bgcolorchange 60s infinite alternate;
+  clip-path: polygon(0 0, 1600px 0, 1600px 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 2900px 0, 2900px 80%, 0 100%);
   min-height: 400px;
   height: 50vh;
+  margin-bottom: -20px;
   > .row {
     height: 100%;
   }
@@ -38,6 +81,14 @@ a {
 
 .hero__image {
   text-align: right;
+  img {
+    height: 400px;
+    width: auto;
+  }
+}
+
+.align-bottom {
+  align-self: flex-end;
 }
 
 .hero__intro {
@@ -65,7 +116,59 @@ a {
 }
 
 section {
+  padding: 36px 0;
   h2 {
-    
+    font-weight: $heavy-weight;
+    margin-bottom: 64px;
   }
+  &.dark {
+    color: #fff;
+    background: $dark-grey;
+  }
+}
+
+.skill {
+  margin-bottom: 64px;
+  text-align: left;
+  i {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: $heavy-weight;
+  }
+  p {
+    font-size: 16px;
+    font-weight: $light-weight;
+  }
+}
+
+.project {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 64px;
+  text-align: left;
+  h3 {
+    font-size: 32px;
+    font-weight: $heavy-weight;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: $light-weight;
+  }
+  p {
+    font-size: 14px;
+    font-weight: $light-weight;
+  }
+  &.flip {
+    text-align: right;
+    flex-flow: row-reverse;
+  }
+}
+
+.project__image {
+  height: auto;
+  width: 100%;
 }

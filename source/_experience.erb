@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    <h2><%= t(:experience_header) %></h2>
+    <div class="container">
+      <div class="row">
+        <% data[locale].experience.each do |item| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="skill">
+            <h3><%= item.title %></h3>
+            <p><%= item.body %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
