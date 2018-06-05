@@ -1,0 +1,48 @@
+- title: "Place I Know Travel Planning"
+  subtitle: "Backend API, frontend web application, iOS app"
+  images:
+    - src: images/placeiknow-1.jpg
+      alt: "iOS app screenshots"
+    - src: images/placeiknow-3.jpg
+      alt: "Place I Know website"
+    - src: himages/placeiknow-2.jpg
+      alt: "Place I Know web application"
+  body: "A part-time small business dedicated to crafting custom vacations for travellers, I started Place I Know with the goal of making travel as hassle-free as possible.</p><p>The backend was originally developed using Ruby and Sinatra. It is currently in the process of being migrated to a Node.js backend with the goal of decoupling the architecture into microservices. The frontend is currently being migrated to a responsive, speedy React.js application.</p><p>The iOS app, written with Swift, features offline itinerary access, realtime chat with a travel planner, and offline maps from Mapbox."
+  links:
+    - title: "iOS app"
+      href: https://itunes.apple.com/us/app/place-i-know/id1310882149?mt=8
+    - title: "Main Website"
+      href: http://www.placeiknow.com
+    - title: "Trip Management Website"
+      href: http://placeiknow-frontend-staging.herokuapp.com/
+    - title: "GitHub"
+      href: https://github.com/shaunjacobsen/place_i_know_backend_v2
+- title: "Lighthouse Home Automation"
+  subtitle: "Distributed cloud-backed network of screens & IoT sensors"
+  images:
+    - src: images/lighthouse-logo.jpg
+      alt: "Lighthouse logo"
+  body: "A home project designed to link the Internet-connected devices in my home with software that orchestrates the devices in real-time.</p><p>For example, the air conditioner will automatically turn on if the outside temperature exceeds a certain threshold, but not if any windows are currently open &mdash; thereby saving energy from being wasted.</p><p>Currently, I have built: A wall-mounted smart mirror that can recognize who is standing in front of it, a wall-mounted touchscreen panel to control all connected devices in the home, and an IoT sensor that detects motion and logs the current temperature and humidity levels."
+  links:
+    - title: "GitHub"
+      href: https://github.com/shaunjacobsen/place_i_know_backend_v2
+- title: "Who's Faster?"
+  subtitle: "Open data visualization built using Javascript + d3.js"
+  images:
+    - src: images/divvy-whos-faster.jpg
+      alt: "Divvy vs Transit screenshot"
+  body: "Divvy, the bike-sharing system in Chicago, releases anonymized trip information twice a year for anyone to analyze. This project, a two-time winner in the 2015 Divvy Data Challenge, compares the median observed trip time between every Divvy station pair and compares it to the same trip by public transportation. The result? It looks like most Divvy trips are faster than public transportation – suggesting bike-share in Chicago is a great addition to the way people move in the city.</p><p>The data was analyzed using PHP scripts that updated information in a SQL database. In order to get trip times via public transportation, the Google Maps API was called for every station pair using a PHP script. To build the visualization, I used the d3.js JavaScript library. The map in the pop-up was created using the Mapbox JavaScript library. Finally, making it pretty was done with good old CSS.</p><p>Won Best Overall Visualization and Most Insightful in the 2015 Divvy Data Challenge. Featured in <em><a href=\"http://www.chicagomag.com/city-life/April-2015/Divvy-Is-Usually-Faster-Than-Public-Transportation/\" target=\"_blank\">Chicago Magazine</a></em>, <em><a href=\"http://www.nbcchicago.com/blogs/stride/Data-Shows-Divvy-Usually-Makes-for-Faster-Commute-Than-Public-Transit-300139211.html\" target=\"_blank\">NBC Chicago</a></em>, and <em><a href=\"https://nextcity.org/daily/entry/chicago-bike-share-stations-added-divvy-expansion-airport-suburbs\" target=\"_blank\">Next City</a></em>."
+  links:
+    - title: "Website"
+      href: http://www.transitized.com/divvy-vs-transit/
+    - title: GitHub
+      href: https://github.com/shaunjacobsen/divvy_savestime
+- title: "Chicago Building Age Map"
+  subtitle: "Built using Javascript + Mapbox"
+  images:
+    - src: images/building-age-map.jpg
+      alt: "Building age map screenshot"
+  body: "The Chicago Building Age Map uses data from the City of Chicago to display the age of construction for many of the city's hundreds of thousands of buildings. Inspired by similar projects in other cities, this map gives anyone the ability to see the history of their city visually. Filtering the map by years gives us an insight into how the city developed – from its 19th century core to the newer skyscrapers of the Loop."
+  links:
+    - title: "Website"
+      href: http://buildings.transitized.com/
