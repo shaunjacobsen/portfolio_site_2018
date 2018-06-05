@@ -1,0 +1,48 @@
+- header: Professional
+  items:
+    - title: "Founder"
+      company: "Place I Know Travel Planning"
+      location: "Chicago, IL"
+      dates: "August 2017 - Current"
+      responsibilities:
+        - I started Place I Know to help people plan better vacations.
+        - Designed and engineered a custom website and its CMS (HTML, CSS, Javascript), trip management software (Ruby), and iOS app (Swift 4).
+        - Migrating the trip management software to a React.js frontend and Node.js backend API in order to integrate new features, decouple the architecture into microservices, and utilize scalable cloud computing platforms.
+    - title: "Implementation Engineer"
+      company: "PowerReviews"
+      location: "Chicago, IL"
+      dates: "September 2016 - August 2017"
+      responsibilities:
+        - Key technical resource for new clients on PowerReviews' SaaS platform.
+        - Responsible for guiding the implementation of the software, identifying roadblocks, technical dependencies, and opportunities to better architect a solution for the client's needs.
+         - Collaborated closely with the client, project manager, and development teams to ensure successful end-to-end completion of each project.
+    - title: "Technical Support Engineer"
+      company: "PowerReviews"
+      location: "Chicago, IL"
+      dates: "October 2015 - September 2016"
+      responsibilities:
+        - Assessed, troubleshooted, and resolved client's technical issues with the PowerReviews SaaS platform via email and phone in English and French, including issues with HTML, CSS, JavaScript, and SQL queries.
+        - Documented software bugs in Jira and strengthened client-facing and internal software documentation.
+        - Conducted quality assurance audits for new software implementations.
+        - Main technical support contact for French-speaking clients.
+    - title: Operating Analytics College Aide
+      company: "MTA New York City Transit"
+      location: "New York, NY"
+      dates: "May 2015 - August 2015"
+      responsibilities:
+        - Developed analyses, wrote workflow automation scripts, and maintained relational databases to improve existing maintenance processes.
+    - title: "Senior Incentive Coordinator"
+      company: "Ipsos North America"
+      location: "Chicago, IL"
+      dates: "September 2012 - July 2014"
+      responsibilities:
+        - Guided team strategy by developing and coordinating development project plans, remaining in scope, within budget, and on time.
+        - Tested & debugged programs to meet software specifications.
+- header: Education
+  items:
+    - title: "Coursework in Community Planning"
+      company: "University of British Columbia"
+      dates: "2014 - 2015"
+    - title: "BA, French; BA, Sociology"
+      company: "University of Wisconsin"
+      dates: "2009 - 2012"

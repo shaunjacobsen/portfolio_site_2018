@@ -1,15 +1,30 @@
 <div class="row">
   <div class="col">
     <h2><%= t(:experience_header) %></h2>
+    <a href="https://s3.amazonaws.com/sjacobsen-public/Shaun+Jacobsen+-+Resume.pdf" target="_blank" class="btn btn-lg btn-primary download-cv"><i class="far fa-file-pdf"></i>&nbsp;Download CV</a>
     <div class="container">
       <div class="row">
-        <% data[locale].experience.each do |item| %>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="skill">
-            <h3><%= item.title %></h3>
-            <p><%= item.body %></p>
+        <% data[locale].experience.each do |section| %>
+        <div class="col-12">
+          <div class="row">
+            <% section.items.each do |item| %>
+            <div class="col-xs-12 col-md-6">
+              <div class="experience">
+                <h4><%= item.title %></h4>
+                <h5><%= item.company %></h5>
+                <p><%= item.dates %></p>
+                <ul>
+                  <% if item.responsibilities %>
+                    <% item.responsibilities.each do |point| %>
+                      <li><%= point %></li>
+                    <% end %>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+            <% end %>
+            </div>
           </div>
-        </div>
         <% end %>
       </div>
     </div>

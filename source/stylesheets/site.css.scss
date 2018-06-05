@@ -118,6 +118,7 @@ body {
 section {
   padding: 36px 0;
   h2 {
+    font-size: 82px;
     font-weight: $heavy-weight;
     margin-bottom: 64px;
   }
@@ -171,4 +172,41 @@ section {
 .project__image {
   height: auto;
   width: 100%;
+}
+
+.experience {
+  @extend .skill;
+  text-align: left;
+  h4 {
+    font-weight: $heavy-weight;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: $light-weight;
+  }
+  p, ul {
+    font-size: 14px;
+    font-weight: $light-weight;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    > li {
+      text-indent: -10px;
+      &:before {
+        content: '-';
+        text-indent: -5px;
+      }
+    }
+  }
+}
+
+.download-cv {
+  animation: bgcolorchange 60s infinite alternate;
+  -webkit-animation: bgcolorchange 60s infinite alternate;
+  border: none;
+  margin-bottom: 64px;
+  i {
+    margin-right: 6px;
+  }
 }
