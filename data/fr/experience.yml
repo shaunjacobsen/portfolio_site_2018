@@ -1,0 +1,51 @@
+- header: Professional
+  items:
+    - title: "Fondateur"
+      company: "Place I Know Travel Planning"
+      location: "Chicago, USA"
+      dates: "août 2017 - aujourd'hui"
+      responsibilities:
+        - J'ai fondé Place I Know pour mieux planifier les vacances.
+        - J'ai développé son site web, son SGV, le logiciel back-end, et une application iOS utilisant HTML, CSS, Javascript, jQuery, Ruby, Node.js, React.js, et Swift 4.
+    - title: "Implementation Engineer"
+      company: "PowerReviews"
+      location: "Chicago, USA"
+      dates: "septembre 2016 - août 2017"
+      responsibilities:
+        - J'étais la ressource technique pour les nouveaux clients qui mettaient en place la plateforme SaaS de PowerReviews.
+        - J'ai guidé les clients en installant le logiciel sur leurs sites web et sur plusieurs plateformes de commerce électronique.
+        - J'ai géré la personnalisation de logiciel avec HTML, CSS, et Javascript.
+        - Ce rôle nécessitait une collaboration proche avec le client, le chef du projet, et d'autres équipes pour assurer l'achèvement du projet.
+    - title: "Technical Support Engineer"
+      company: "PowerReviews"
+      location: "Chicago, USA"
+      dates: "octobre 2015 - septembre 2016"
+      responsibilities:
+        - J'ai évalué et résolu les problèmes techniques que nos clients rencontraient avec la plateforme par courriel et téléphone en anglais et français.
+        - La résolution de ces problèmes exigeait de faire les modifications du HTML, CSS, et Javascript, ou les rêquetes SQL pour les clients.
+        - J'ai aussi audité les nouveaux installations du logiciel afin de garantir son bon fonctionnement.
+    - title: Operating Analytics College Aide
+      company: "MTA New York City Transit"
+      location: "New York, USA"
+      dates: "mai 2015 - août 2015"
+      responsibilities:
+        - J'ai facilité la mise en œuvre des nouveaux processus informatiques à travers le département du métro.
+        - J'ai développé les scripts pour automatiser les processus manuels.
+        - J'ai fait une analyse de rémunération des heures supplémentaires pour le personnel du métro afin d'obtempérer une nouvelle régulation du gouvernement fédéral.
+    - title: "Senior Incentive Coordinator"
+      company: "Ipsos North America"
+      location: "Chicago, USA"
+      dates: "septembre 2012 - juillet 2014"
+      responsibilities:
+        - J'étais le directeur de l'équipe de programme d'incitation de sondages.
+        - Responsable pour les nouveaux projets au but d'augmenter le taux de participation aux sondages d'Ipsos au Canada et aux Etats-Unis, utilisant spécifiquement le ludification (gamification).
+- header: Education
+  items:
+    - title: "Cours en urbanisme"
+      company: "Université de la Colombie-Britannique"
+      dates: "2014 - 2015"
+    - title: "Licence, French; Licence, Sociology"
+      company: "Université de Wisconsin"
+      dates: "2009 - 2012"
+      responsibilities:
+        - "Options : Urbanisme, economie"

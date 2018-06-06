@@ -1,21 +1,40 @@
 <script type="text/javascript">
 function beginSend() {
-  $('.form-control, .form-group').addClass('disabled');
-  $('#form-message').slideDown();
+  $('#form-message').slideUp();
+  $('#submit-loading').show();
+  $('#submit-form').hide();
+  $('#error-message').fadeOut();
 }
 
 function isSuccessful() {
+  $('#form-message').show();
   $('#form-area').slideUp();
   $('#success-message').fadeIn();
-  $('#loading').fadeOut();
+  $('#error-message').fadeOut();
 }
 
 function isError(error) {
-  $('#error-message').slideDown();
-  $('#loading').fadeOut();
+  $('#form-message').slideDown();
+  $('#error-message').fadeIn();
+  $('#error-message').html(error['<%= locale %>']);
+  $('#submit-loading').hide();
+  $('#submit-form').show();
+}
+
+function isUserOkWithCookies() {
+  var hasSeenCookieWarning = Cookies.get('hasViewedCookieWarning');
+  return !!hasSeenCookieWarning;
+}
+
+function loadConsentableScripts() {  
+}
+
+function displayCookieWarning() {
+  $('.stick-bottom').fadeIn();
 }
 
 $(document).ready(function() {
+  // Contact Form Submit
   $('#form').on('submit', function(event) { 
     event.preventDefault();
     beginSend();
@@ -27,8 +46,6 @@ $(document).ready(function() {
       recaptcha: grecaptcha.getResponse(),
     };
 
-    console.log(data);
-
     $.ajax({
       method: 'POST',
       url: 'https://1u6r47084e.execute-api.us-east-1.amazonaws.com/prod/sendPersonalWebsiteEmail',
@@ -38,10 +55,25 @@ $(document).ready(function() {
         isSuccessful();
       },
       error: function(e) {
-        isError(e);
+        isError(e.responseJSON);
       }
     })
   });
+
+  // GDPR
+  if(isUserOkWithCookies()) {
+    loadConsentableScripts();
+  } else {
+    displayCookieWarning();
+  }
+
+  $('#accept-cookies').on('click', function(e) {
+    e.preventDefault();
+    $('.stick-bottom').fadeOut();
+    Cookies.set('hasViewedCookieWarning', true);
+    loadConsentableScripts();
+  });
+
 });
 
   

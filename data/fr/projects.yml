@@ -1,0 +1,44 @@
+- title: "Place I Know Travel Planning"
+  subtitle: "Backend Node.js, frontend React.js, appli iOS"
+  images:
+    - src: /images/placeiknow-1.jpg
+      alt: "Captures d'écran de l'application iOS"
+  body: "Une entreprise à temps partiel fondée afin de mieux planifier les voyages. Le serveur principal (backend) était originalement développé avec Ruby (Sinatra). Maintenant, je suis en cours de mettre à jour le logiciel avec un backend Node.js afin de découpler l’architecture aux microservices. Le frontend est en cours d’un redesign et migration vers React.js. L’appli iOS, programmé en Swift, inclut les fonctionnalités suivantes : cartes hors-ligne, tchat en temps réels, et accès à l'itinéraire hors-ligne."
+  links:
+    - title: "Appli iOS"
+      href: https://itunes.apple.com/us/app/place-i-know/id1310882149?mt=8
+    - title: "Site web"
+      href: http://www.placeiknow.com
+    - title: "Site web de gestion de voyage"
+      href: http://placeiknow-frontend-staging.herokuapp.com/
+    - title: "GitHub"
+      href: https://github.com/shaunjacobsen/place_i_know_backend_v2
+- title: "Lighthouse Automatisation de domicile"
+  subtitle: "Réseau d’appareils distribués"
+  images:
+    - src: /images/lighthouse-logo.jpg
+      alt: "Logo de Lighthouse"
+  body: "Un projet au but de lier les appareils connectés à l’Internet chez moi avec un logiciel qui organise le fonctionnement des appareils.</p><p>Par exemple, le climatiseur se met en marche quand il fait trop chaud, mais pas si les fenêtres sont aussi ouverts.</p><p>En ce moment, j’ai développé : un miroir mural avec un écran, un écran tactile mural pour contrôler les appareils, et un appareil qui détecte le mouvement et enregistre la température et l’humidité."
+  links:
+    - title: "GitHub"
+      href: https://github.com/shaunjacobsen/place_i_know_backend_v2
+- title: "Who's Faster?"
+  subtitle: "Visualisation de données (Javascript + d3.js)"
+  images:
+    - src: /images/divvy-whos-faster.jpg
+      alt: "Capture d'écran Divvy vs Transit"
+  body: "Divvy, le système à vélos en libre-service de Chicago, mets à la disposition du public les données anonymes de voyages. Ce projet, qui a gagné deux récompenses dans le concours Divvy Data Challenge en 2015, compare le temps de voyage médian entre chaque station de vélos et le compare avec le même voyage par les transports publics. La visualization montre que la plupart des voyages par vélo sont plus vites que celles par les transports publics.</p><p>Les données ont étés évaluées avec les scripts PHP et le Google Maps API. La bibliothèque Javascript d3.js est utilisée pour montrer les données, et une carte Mapbox.js pour montrer les voyages.</p><p>Gagnant de Best Overall Visualization (meilleur visualisation en général) et Most Insightful (le plus judicieuse).</p><p>Visualisation publié dans les publications suivantes : <em><a href=\"http://www.chicagomag.com/city-life/April-2015/Divvy-Is-Usually-Faster-Than-Public-Transportation/\" target=\"_blank\">Chicago Magazine</a></em>, <em><a href=\"http://www.nbcchicago.com/blogs/stride/Data-Shows-Divvy-Usually-Makes-for-Faster-Commute-Than-Public-Transit-300139211.html\" target=\"_blank\">NBC Chicago</a></em>, et <em><a href=\"https://nextcity.org/daily/entry/chicago-bike-share-stations-added-divvy-expansion-airport-suburbs\" target=\"_blank\">Next City</a></em>."
+  links:
+    - title: "Site web"
+      href: http://www.transitized.com/divvy-vs-transit/
+    - title: GitHub
+      href: https://github.com/shaunjacobsen/divvy_savestime
+- title: "Carte de l'âge des bâtiments de Chicago"
+  subtitle: "Javascript + Mapbox"
+  images:
+    - src: /images/building-age-map.jpg
+      alt: "Capture d'écran de la carte"
+  body: "Cette carte montre les données de l’âge des bâtiments fournis par la ville de Chicago. Inspiré par les projets similaires d’autres villes, cette carte donne au monde la possibilité de comprendre l’histoire de leur ville."
+  links:
+    - title: "Site web"
+      href: http://buildings.transitized.com/

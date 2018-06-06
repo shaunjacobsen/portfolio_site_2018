@@ -13,11 +13,11 @@ activate :dotenv
 
 activate :directory_indexes
 
-activate :i18n, langs: [:en, :fr]
+activate :i18n, langs: [:en, :fr], mount_at_root: :en, path: '/:locale/'
 
 activate :s3_sync do |config|
   config.bucket = 'sjacobsen.com'
-  config.region = 'us-east-1'
+  config.region = 'us-east-2'
   config.aws_access_key_id = ENV['AWS_ACCESS_KEY']
   config.aws_secret_access_key = ENV['AWS_ACCESS_SECRET']
   config.after_build = false
@@ -49,11 +49,15 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def determine_language_header(lang)
+    if lang === :fr
+      return "<div><a href=\"/\">Hello</a></div> <div class=\"hero__intro--selected-language\"><a href=\"fr\">Bonjour</a></div>"
+    else
+      return "<div class=\"hero__intro--selected-language\"><a href=\"/\">Hello</a></div> <div><a href=\"fr\">Bonjour</a></div>"
+    end
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

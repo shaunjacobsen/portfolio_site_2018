@@ -1,12 +1,8 @@
 - title: "Place I Know Travel Planning"
-  subtitle: "Backend API, frontend web application, iOS app"
+  subtitle: "Node.js backend API, React.js frontend web application, iOS app"
   images:
     - src: images/placeiknow-1.jpg
       alt: "iOS app screenshots"
-    - src: images/placeiknow-3.jpg
-      alt: "Place I Know website"
-    - src: himages/placeiknow-2.jpg
-      alt: "Place I Know web application"
   body: "A part-time small business dedicated to crafting custom vacations for travellers, I started Place I Know with the goal of making travel as hassle-free as possible.</p><p>The backend was originally developed using Ruby and Sinatra. It is currently in the process of being migrated to a Node.js backend with the goal of decoupling the architecture into microservices. The frontend is currently being migrated to a responsive, speedy React.js application.</p><p>The iOS app, written with Swift, features offline itinerary access, realtime chat with a travel planner, and offline maps from Mapbox."
   links:
     - title: "iOS app"

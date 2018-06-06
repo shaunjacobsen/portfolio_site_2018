@@ -1,15 +1,15 @@
 <div class="row no-gutters">
   <div class="col">
     <div class="hero">
-      <div class="row">
+      <div class="row" style="margin-right:0;">
         <div class="col-4 col-md-5 align-bottom">
           <div class="hero__image">
-            <img src="images/cutout.png">
+            <img src="/images/cutout.png">
           </div>
         </div>
         <div class="col-md-7">
           <div class="hero__intro">
-            <h1><span class="hero__intro--selected-language">Hello</span> Bonjour</h1>
+            <h1><%= determine_language_header(locale) %></h1>
             <h2><span class="light"><%= t(:my_name_is) %></span> Shaun Jacobsen</h2>
             <h3><%= t(:byline) %></h3>
           </div>
