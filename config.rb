@@ -5,9 +5,23 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+Fog.credentials = { :path_style => true }
+
 activate :livereload
 
+activate :dotenv
+
+activate :directory_indexes
+
 activate :i18n, langs: [:en, :fr]
+
+activate :s3_sync do |config|
+  config.bucket = 'sjacobsen.com'
+  config.region = 'us-east-1'
+  config.aws_access_key_id = ENV['AWS_ACCESS_KEY']
+  config.aws_secret_access_key = ENV['AWS_ACCESS_SECRET']
+  config.after_build = false
+end
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -44,7 +58,8 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+  activate :gzip
+end
