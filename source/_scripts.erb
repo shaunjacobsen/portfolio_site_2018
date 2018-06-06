@@ -1,0 +1,46 @@
+<script type="text/javascript">
+function beginSend() {
+  $('.form-control, .form-group').toggleClass('disabled');
+  $('#form-message').slideDown();
+}
+
+function isSuccessful() {
+  $('#form-area').slideUp();
+  $('#loading').fadeOut();
+}
+
+function isError(error) {
+  $('#error-message').slideDown();
+  $('#loading').fadeOut();
+}
+
+$(document).ready(function() {
+  $('#form').on('submit', function(event) { 
+    event.preventDefault();
+    beginSend();
+
+    var data = {
+      from_email: $('input#from_email').val(),
+      from_name: $('input#from_name').val(),
+      message: $('textarea#message').val()
+    };
+
+    console.log(data);
+
+    $.ajax({
+      method: 'POST',
+      url: 'https://1u6r47084e.execute-api.us-east-1.amazonaws.com/prod/sendPersonalWebsiteEmail',
+      data: data,
+      dataType: 'json',
+      success: function(s) {
+        isSuccessful();
+      },
+      error: function(e) {
+        isError(e);
+      }
+    })
+  });
+});
+
+  
+</script>
