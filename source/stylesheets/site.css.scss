@@ -1,7 +1,6 @@
 $dark-grey: #333;
 $blue-grey: #f6f7fc;
 $yellow: #f9d423;
-$orange: rgb(252, 145, 58);
 $red: rgb(255, 61, 127);
 $blue: rgb(40, 215, 203);
 $green: #85e1c8;
@@ -11,12 +10,42 @@ $light-weight: 200;
 $normal-weight: 300;
 $heavy-weight: 800;
 
+@mixin mobile {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 @keyframes bgcolorchange {
   0% {
     background: $yellow;
   }
   20% {
-    background: $orange;
+    background: $yellow;
   }
   40% {
     background: $red;
@@ -36,7 +65,7 @@ $heavy-weight: 800;
     background: $yellow;
   }
   20% {
-    background: $orange;
+    background: $yellow;
   }
   40% {
     background: $red;
@@ -60,10 +89,21 @@ body {
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
   text-align: center;
+  width: 100%;
+}
+
+.container-fluid {
+  &.no-padding {
+    padding: 0;
+  }
 }
 
 .light {
   font-weight: $light-weight;
+}
+
+.btn {
+  margin: 6px auto;
 }
 
 .hero {
@@ -73,22 +113,38 @@ body {
   -webkit-clip-path: polygon(0 0, 2900px 0, 2900px 80%, 0 100%);
   min-height: 400px;
   height: 50vh;
-  margin-bottom: -20px;
+  margin-bottom: 20px;
   > .row {
+    align-items: center;
     height: 100%;
+  }
+  @include mobile {
+    > div {
+      flex-direction: column;
+      flex-flow: column-reverse;
+    }
+  }
+  @include tablet {
+    margin-bottom: -20px;
   }
 }
 
 .hero__image {
   text-align: right;
   img {
-    height: 400px;
+    height: 200px;
     width: auto;
+    @include tablet {
+      height: 400px;
+    }
   }
 }
 
 .align-bottom {
   align-self: flex-end;
+  @include mobile {
+    align-self: flex-start;
+  }
 }
 
 .hero__intro {
@@ -113,24 +169,41 @@ body {
     font-size: 18px;
     font-weight: $light-weight;
   }
+  @include mobile {
+    text-align: right;
+    margin: 0 16px 0 auto;
+    width: 66.3%;
+  }
 }
 
 section {
-  padding: 36px 0;
+  padding: 18px 9px;
+  @include tablet {
+    padding: 48px 0;
+  }
   h2 {
-    font-size: 82px;
+    font-size: 58px;
     font-weight: $heavy-weight;
-    margin-bottom: 64px;
+    margin-bottom: 36px;
+    @include tablet {
+      margin-bottom: 64px;
+    }
   }
   &.dark {
     color: #fff;
     background: $dark-grey;
   }
+  @include tablet {
+    font-size: 82px;
+  }
 }
 
 .skill {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   text-align: left;
+  @include mobile {
+    text-align: center;
+  }
   i {
     font-size: 32px;
     margin-bottom: 18px;
@@ -149,8 +222,11 @@ section {
   align-items: center;
   display: flex;
   flex-direction: row;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   text-align: left;
+  @include tablet {
+    margin-bottom: 64px;
+  }
   h3 {
     font-size: 32px;
     font-weight: $heavy-weight;
@@ -163,9 +239,11 @@ section {
     font-size: 14px;
     font-weight: $light-weight;
   }
-  &.flip {
-    text-align: right;
-    flex-flow: row-reverse;
+  @include tablet {
+    &.flip > .row {
+      text-align: right;
+      flex-flow: row-reverse;
+    }
   }
 }
 
@@ -184,24 +262,25 @@ section {
     font-size: 18px;
     font-weight: $light-weight;
   }
-  p, ul {
+  p,
+  ul {
     font-size: 14px;
     font-weight: $light-weight;
   }
   ul {
     list-style-type: none;
-    margin: 0;
+    padding: 5px 10px;
     > li {
       text-indent: -10px;
       &:before {
-        content: '-';
-        text-indent: -5px;
+        content: "-";
+        padding-right: 4px;
       }
     }
   }
 }
 
-.download-cv {
+.link-colored {
   animation: bgcolorchange 60s infinite alternate;
   -webkit-animation: bgcolorchange 60s infinite alternate;
   border: none;
@@ -209,4 +288,29 @@ section {
   i {
     margin-right: 6px;
   }
+}
+
+.contact {
+  p {
+    font-size: 18px;
+    font-weight: $light-weight;
+  }
+  #form-message,
+  #success-message,
+  #error-message {
+    display: none;
+  }
+}
+
+footer {
+  align-items: center;
+  background: $dark-grey;
+  color: darken($blue-grey, 10%);
+  font-size: 12px;
+  font-weight: $light-weight;
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  justify-content: center;
+  text-align: center;
 }
