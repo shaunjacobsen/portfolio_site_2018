@@ -1,11 +1,12 @@
 <script type="text/javascript">
 function beginSend() {
-  $('.form-control, .form-group').toggleClass('disabled');
+  $('.form-control, .form-group').addClass('disabled');
   $('#form-message').slideDown();
 }
 
 function isSuccessful() {
   $('#form-area').slideUp();
+  $('#success-message').fadeIn();
   $('#loading').fadeOut();
 }
 
@@ -20,9 +21,10 @@ $(document).ready(function() {
     beginSend();
 
     var data = {
-      from_email: $('input#from_email').val(),
       from_name: $('input#from_name').val(),
-      message: $('textarea#message').val()
+      from_email: $('input#from_email').val(),
+      message: $('textarea#message').val(),
+      recaptcha: grecaptcha.getResponse(),
     };
 
     console.log(data);
@@ -30,8 +32,8 @@ $(document).ready(function() {
     $.ajax({
       method: 'POST',
       url: 'https://1u6r47084e.execute-api.us-east-1.amazonaws.com/prod/sendPersonalWebsiteEmail',
-      data: data,
-      dataType: 'json',
+      data: JSON.stringify(data),
+      contentType: 'application/json',
       success: function(s) {
         isSuccessful();
       },
