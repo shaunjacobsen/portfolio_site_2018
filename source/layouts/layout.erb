@@ -11,6 +11,11 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
+  <div class="container-fluid no-padding">
     <%= yield %>
+    <%= partial 'footer' %>
+    </div>
   </body>
+  <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+  <%= partial 'scripts' %>
 </html>
