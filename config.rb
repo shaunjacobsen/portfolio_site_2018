@@ -21,6 +21,7 @@ activate :s3_sync do |config|
   config.aws_access_key_id = ENV['AWS_ACCESS_KEY']
   config.aws_secret_access_key = ENV['AWS_ACCESS_SECRET']
   config.after_build = false
+  config.delete = false
 end
 
 # Layouts
