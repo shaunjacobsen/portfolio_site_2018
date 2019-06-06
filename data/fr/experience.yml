@@ -1,15 +1,23 @@
 - header: Professional
   items:
+    - title: "Développeur web"
+      company: "Grubhub, Inc."
+      location: "Chicago, Etats-Unis"
+      dates: "juillet 2018 - aujourd'hui"
+      responsibilities:
+        - Responsable du développement d’une application web (React.js et Ruby) pour l'équipe marketing qui améliore et standardise le processus de conception et de génération des emailings clients.
+        - Maintien des applications web internes, avec l'ajout d’ensemble de tests, ainsi que des les sites marketing Wordpress pour nos marques.
+        - Création des pages de renvoi et modèles d'email à partir des designs en utilisant HTML, CSS, Javascript, et PHP (Wordpress).
     - title: "Fondateur"
       company: "Place I Know Travel Planning"
-      location: "Chicago, USA"
+      location: "Chicago, Etats-Unis"
       dates: "août 2017 - aujourd'hui"
       responsibilities:
         - J'ai fondé Place I Know pour mieux planifier les vacances.
         - J'ai développé son site web, son SGV, le logiciel back-end, et une application iOS utilisant HTML, CSS, Javascript, jQuery, Ruby, Node.js, React.js, et Swift 4.
     - title: "Implementation Engineer"
       company: "PowerReviews"
-      location: "Chicago, USA"
+      location: "Chicago, Etats-Unis"
       dates: "septembre 2016 - août 2017"
       responsibilities:
         - J'étais la ressource technique pour les nouveaux clients qui mettaient en place la plateforme SaaS de PowerReviews.
@@ -18,7 +26,7 @@
         - Ce rôle nécessitait une collaboration proche avec le client, le chef du projet, et d'autres équipes pour assurer l'achèvement du projet.
     - title: "Technical Support Engineer"
       company: "PowerReviews"
-      location: "Chicago, USA"
+      location: "Chicago, Etats-Unis"
       dates: "octobre 2015 - septembre 2016"
       responsibilities:
         - J'ai évalué et résolu les problèmes techniques que nos clients rencontraient avec la plateforme par courriel et téléphone en anglais et français.
@@ -26,7 +34,7 @@
         - J'ai aussi audité les nouveaux installations du logiciel afin de garantir son bon fonctionnement.
     - title: Operating Analytics College Aide
       company: "MTA New York City Transit"
-      location: "New York, USA"
+      location: "New York, Etats-Unis"
       dates: "mai 2015 - août 2015"
       responsibilities:
         - J'ai facilité la mise en œuvre des nouveaux processus informatiques à travers le département du métro.
@@ -34,7 +42,7 @@
         - J'ai fait une analyse de rémunération des heures supplémentaires pour le personnel du métro afin d'obtempérer une nouvelle régulation du gouvernement fédéral.
     - title: "Senior Incentive Coordinator"
       company: "Ipsos North America"
-      location: "Chicago, USA"
+      location: "Chicago, Etats-Unis"
       dates: "septembre 2012 - juillet 2014"
       responsibilities:
         - J'étais le directeur de l'équipe de programme d'incitation de sondages.

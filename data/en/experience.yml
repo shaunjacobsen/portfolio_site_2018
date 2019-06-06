@@ -1,5 +1,13 @@
 - header: Professional
   items:
+    - title: "Web Developer"
+      company: "Grubhub, Inc."
+      location: "Chicago, IL"
+      dates: "July 2018 - Current"
+      responsibilities:
+        - Developed an internal web application (React frontend, Ruby backend) to streamline and standardize the design of marketing emails across the company, eliminating the need for external vendors. 
+        - Maintain existing internal web applications, including adding test coverage, as well as Wordpress websites for the Grubhub brand.
+        - Create landing pages and email templates from creative assets using HTML, CSS, Javascript, and PHP (Wordpress).
     - title: "Founder"
       company: "Place I Know Travel Planning"
       location: "Chicago, IL"
